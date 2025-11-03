@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.NavigationMenu {
+    height: 90px;
+    text-align: center;
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    margin: 15px 0 30px 0;
+}
+
+.LeftContent {
+    flex: 1;
+    background-color: #90ee90;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.CenterContent {
+    flex: 1;
+    background-color: #90ee90;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.RightContent {
+    flex: 1;
+    background-color: #90ee90;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.cake-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+}

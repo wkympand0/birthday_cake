@@ -12,19 +12,19 @@ body {
 }
 
 .hp {
-    font-size: 18;
-    color: rgb(188, 155, 8);
     font-family: -apple-system, "ヒラギノ丸ゴ Pro";
+    font-size: 18px;
+    color: yellow;
 }
 
 .timer {
-    font-size: 20;
+    font-size: 20px;
 
 }
 
 .me {
     font-family: -apple-system, "ヒラギノ丸ゴ Pro";
-    font-size: 20;
+    font-size: 20px;
 }
 
 #header {
@@ -37,6 +37,14 @@ body {
     z-index: 10;
 }
 
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    /* 下外からスタート */
+    width: 100px;
+    /* 初期サイズ */
+}
+
 #human {
     width: 500px;
     border-radius: 50%;
@@ -44,12 +52,4 @@ body {
     border: 3px solid rgba(27, 60, 93, 0.8);
     box-shadow: 0 0 10px rgba(25, 33, 125, 0.6);
     margin-top: 20px;
-}
-
-.balloon {
-    position: absolute;
-    bottom: -150px;
-    /* 下外からスタート */
-    width: 100px;
-    /* 初期サイズ */
 }

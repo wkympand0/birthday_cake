@@ -14,7 +14,7 @@ body {
 .hp {
     font-family: -apple-system, "ヒラギノ丸ゴ Pro";
     font-size: 18px;
-    color: yellow;
+    color: #bb9855;
 }
 
 .timer {
@@ -40,6 +40,7 @@ body {
 .balloon {
     position: absolute;
     bottom: -150px;
+    z-index: 10;
     /* 下外からスタート */
     width: 100px;
     /* 初期サイズ */

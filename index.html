@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="sentence" content="width=device=width,initial-scale=1.0">
-    <title>Birthday Cake!!</title>
+    <title>カウントダウン</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.5rem;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- <h1 id="message"> Hello World</h1>
-    <script src="script.js"></script> -->
-    <div class="NavigationMenu">
-        <p>ナビゲーション</p>
+    <div id="back">
+        <p>りょうまの誕生日まで</p>
+        <p class="timer">残り
+            <span id="day">--</span>日と
+            <span id="hour">--</span>時間
+            <span id="minute">--</span>分
+            <span id="second">--</span>秒
+        </p>
+        <img src="images/ryoma02.jpeg" alt="human" id="human">
+
+        <script src="script.js"></script>
     </div>
-    <main>
-        <!-- <div class="LeftContent">
-            <p>左</p>
-        </div> -->
-        <div class="CenterContent">
-            <p>中央</p>
-            <img src="images/sweets_cake_rousoku.png" alt="バースデーケーキ" class="cake-image">
-        </div>
-        <!-- <div class="RightContent">
-            <p>右</p>
-        </div> -->
-    </main>
 </body>
 
 </html>

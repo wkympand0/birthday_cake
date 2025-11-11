@@ -1,44 +1,24 @@
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.NavigationMenu {
-    height: 90px;
-    text-align: center;
-    background-color: #1e90ff;
-    color: #fff;
-}
-
-main {
-    display: flex;
-    min-height: 100vh;
-    margin: 15px 0 30px 0;
-}
-
-.LeftContent {
-    flex: 1;
-    background-color: #90ee90;
-    text-align: center;
-    margin-right: 15px;
-}
-
-.CenterContent {
-    flex: 1;
-    background-color: #90ee90;
-    text-align: center;
-    margin-right: 15px;
-}
-
-.RightContent {
-    flex: 1;
-    background-color: #90ee90;
-    text-align: center;
-    margin-right: 15px;
-}
-
 .cake-image {
     max-width: 80%;
     height: auto;
     border-radius: 20px;
+}
+
+body {
+    background-color: rgb(19, 33, 67);
+    color: white;
+}
+
+#human {
+    width: 500px;
+    /* 大きさ */
+    /* height: 200px; */
+    border-radius: 50%;
+    /* 丸くする */
+    object-fit: cover;
+    /* 画像の中心を保つ */
+    border: 3px solid rgb(17, 36, 55);
+    /* 枠線 */
+    box-shadow: 0 0 10px rgba(19, 24, 85, 0.6);
+    /* 影 */
 }

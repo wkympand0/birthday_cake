@@ -11,6 +11,17 @@ body {
     position: relative;
 }
 
+.hp {
+    font-size: 18;
+    color: rgb(188, 155, 8);
+    font-family: -apple-system, "ヒラギノ丸ゴ Pro";
+}
+
+.timer {
+    font-size: 20;
+
+}
+
 .me {
     font-family: -apple-system, "ヒラギノ丸ゴ Pro";
     font-size: 20;

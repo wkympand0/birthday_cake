@@ -9,8 +9,12 @@ function showRestTime() {
     const rest = goal.getTime() - now.getTime();
 
     if (rest <= 0) {
-        document.querySelector(".timer").innerHTML = "りょうま！！25歳のお誕生日おめでとう！";
+
         document.querySelector(".start").textContent = null;
+        const timerEl = document.querySelector(".timer");
+        timerEl.innerHTML = `
+        <span style="font-size: 1.5em;">りょうま！！25歳のお誕生日おめでとう！！</span>
+    `;
         return;
     }
 

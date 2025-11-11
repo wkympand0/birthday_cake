@@ -1,23 +1,21 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(180deg, #071135 0%, #0b2348 70%);
-    display: flex;
-    justify-content: center;
-    /* 横方向中央 */
-    align-items: center;
-    /* 縦方向中央 */
-    flex-direction: column;
-    /* 縦に並べる */
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #0b2348;
     color: white;
-    font-family: sans-serif;
     text-align: center;
-    position: relative;
-    /* 風船など絶対配置要素の基準 */
+    */
+}
+
+.me {
+    font-family: -apple-system, "ヒラギノ丸ゴ Pro";
+}
+
+#header {
+    width: auto;
+    height: 80px;
 }
 
 #back {

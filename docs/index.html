@@ -12,11 +12,13 @@
 <body>
     <div id="back">
 
-        <font size="24" class="me">りょうまの誕生日まで
-        </font>
+        <p class="start">
+            <font class="me">りょうまの誕生日まで
+            </font>
+        </p>
 
         <p class="timer">
-            <font size="17" class="me"> 残り<span id="day">--</span>日と
+            <font class="me"> 残り<span id="day">--</span>日と
                 <span id="hour">--</span>時間
                 <span id="minute">--</span>分
                 <span id="second">--</span>秒
@@ -27,15 +29,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script src="script.js"></script>
-    <audio id="bg-music" src="audio/Canon.mp3" loop></audio>
+    <audio id="bg-music" src="audio/birthday.mp3" loop></audio>
 
     <script>
         const music = document.getElementById('bg-music');
 
-        // 画面を押したら再生
         document.body.addEventListener('click', () => {
-            music.play().catch(err => console.log("再生できません:", err));
-        }, { once: true }); // 1回だけ実行
+            if (music.paused) {
+                music.play().catch(err => console.log("再生できません:", err));
+            } else {
+                music.pause();
+            }
+        });
     </script>
 </body>
 

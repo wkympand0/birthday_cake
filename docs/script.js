@@ -9,7 +9,8 @@ function showRestTime() {
     const rest = goal.getTime() - now.getTime();
 
     if (rest <= 0) {
-        document.querySelector(".timer").textContent = "りょうま！！25歳の誕生日おめでとう！";
+        document.querySelector(".timer").innerHTML = "りょうま！！25歳のお誕生日おめでとう！";
+        document.querySelector(".start").textContent = null;
         return;
     }
 
@@ -60,4 +61,4 @@ function createBalloon() {
 }
 
 // 生成間隔 1秒ごと
-// setInterval(createBalloon, 1000);
+setInterval(createBalloon, 1000);

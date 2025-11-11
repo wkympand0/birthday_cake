@@ -1,16 +1,19 @@
 html,
 body {
     width: 700px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100vw;
+    /* 画面幅いっぱい */
+    height: 100vh;
     background: #0b2348;
     color: white;
     text-align: center;
-    */
+    overflow: hidden;
+    position: relative;
 }
 
 .me {
     font-family: -apple-system, "ヒラギノ丸ゴ Pro";
+    font-size: 20;
 }
 
 #header {
@@ -27,8 +30,8 @@ body {
     width: 500px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(17, 36, 55, 0.8);
-    box-shadow: 0 0 10px rgba(19, 24, 85, 0.6);
+    border: 3px solid rgba(27, 60, 93, 0.8);
+    box-shadow: 0 0 10px rgba(25, 33, 125, 0.6);
     margin-top: 20px;
 }
 

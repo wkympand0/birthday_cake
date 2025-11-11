@@ -1,48 +1,63 @@
-// console.log("Hello World from script.js");
+const sky = document.body;
+const images = ['images/balloon_dark_blue.png', 'images/balloon_light_blue.png'];
+const MAX_BALLOONS = 10;
 
-// document.getElementById("message").textContent = "Birthday Cake🐼";
-// console.log("Hello World from script.js");
-
+// カウントダウン
 function showRestTime() {
     const now = new Date();
-    // 👇 11 = 12月, 10 = 11月（今回は11月12日）
     const goal = new Date(2025, 10, 12);
+    const rest = goal.getTime() - now.getTime();
 
-    const restMillisecond = goal.getTime() - now.getTime();
-
-    if (restMillisecond <= 0) {
-        document.querySelector(".timer").textContent = "おめでとう🎉 当日です！";
+    if (rest <= 0) {
+        document.querySelector(".timer").textContent = "りょうま！！25歳の誕生日おめでとう！";
         return;
     }
 
-    const day = Math.floor(restMillisecond / 1000 / 60 / 60 / 24);
-    const hour = Math.floor(restMillisecond / 1000 / 60 / 60) % 24;
-    const minute = Math.floor(restMillisecond / 1000 / 60) % 60;
-    const second = Math.floor(restMillisecond / 1000) % 60;
+    const day = Math.floor(rest / 1000 / 60 / 60 / 24);
+    const hour = Math.floor(rest / 1000 / 60 / 60) % 24;
+    const minute = Math.floor(rest / 1000 / 60) % 60;
+    const second = Math.floor(rest / 1000) % 60;
 
     document.getElementById("day").textContent = day;
     document.getElementById("hour").textContent = hour;
     document.getElementById("minute").textContent = String(minute).padStart(2, "0");
     document.getElementById("second").textContent = String(second).padStart(2, "0");
 }
-
-// 初回表示＋1秒ごと更新
 showRestTime();
 setInterval(showRestTime, 1000);
 
+// 風船生成
+function rand(min, max) { return Math.random() * (max - min) + min; }
 
-// // 画像要素を取得
-// const human = document.getElementById("human");
+function createBalloon() {
+    const img = document.createElement('img');
+    img.src = images[Math.floor(Math.random() * images.length)];
+    img.className = 'balloon';
 
-// // 幅と高さを指定（px や %）
-// human.style.width = "500px";
-// // human.style.height = "400px";
+    // 横位置を画面外左右も含めてランダム
+    img.style.left = rand(-10, 100) + 'vw';
 
-// // 枠を丸く（円形にするには borderRadius: 50%）
-// human.style.borderRadius = "50%";
+    // サイズ
+    const size = rand(100, 190);
+    img.style.width = size + 'px';
 
-// // 枠線をつけたい場合（オプション）
-// human.style.border = "3px solid #ccc";
+    sky.appendChild(img);
 
-// // 影をつけたい場合（オプション）
-// human.style.boxShadow = "0 0 10px rgba(66, 109, 219, 0.3)";
+    // Anime.jsでゆっくり上昇＋横揺れ
+    anime({
+        targets: img,
+        translateX: rand(-30, 30),        // 横揺れ
+        translateY: -667 - 1500,          // 画面上外まで
+        scale: rand(1.0, 2.0),           // サイズ変化
+        duration: rand(9000, 10000),    // 20〜30秒で上昇
+        easing: 'easeOutSine',
+        complete: () => img.remove()
+    });
+
+    // 最大数制御
+    const balloons = document.querySelectorAll('.balloon');
+    if (balloons.length > MAX_BALLOONS) balloons[0].remove();
+}
+
+// 生成間隔 1秒ごと
+// setInterval(createBalloon, 1000);

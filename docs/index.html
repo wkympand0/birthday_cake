@@ -3,31 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>カウントダウン</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            font-size: 1.5rem;
-        }
-    </style>
+    <title>Birthday Balloon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="back">
-        <p>りょうまの誕生日まで</p>
-        <p class="timer">残り
-            <span id="day">--</span>日と
-            <span id="hour">--</span>時間
-            <span id="minute">--</span>分
-            <span id="second">--</span>秒
+
+        <font size="24">りょうまの誕生日まで
+        </font>
+
+        <p class="timer">
+            <font size="17"> 残り<span id="day">--</span>日と
+                <span id="hour">--</span>時間
+                <span id="minute">--</span>分
+                <span id="second">--</span>秒
+            </font>
         </p>
         <img src="images/ryoma02.jpeg" alt="human" id="human">
-
-        <script src="script.js"></script>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="script.js"></script>
+    <audio id="bg-music" src="audio/Canon.mp3" loop></audio>
+
+    <script>
+        const music = document.getElementById('bg-music');
+
+        // 画面を押したら再生
+        document.body.addEventListener('click', () => {
+            music.play().catch(err => console.log("再生できません:", err));
+        }, { once: true }); // 1回だけ実行
+    </script>
 </body>
 
 </html>

@@ -1,24 +1,41 @@
-.cake-image {
-    max-width: 80%;
-    height: auto;
-    border-radius: 20px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #071135 0%, #0b2348 70%);
+    overflow: hidden;
+    /* スクロール禁止 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    /* 風船の絶対配置用 */
 }
 
-body {
-    background-color: rgb(19, 33, 67);
-    color: white;
+#back {
+    position: relative;
+    z-index: 10;
 }
 
 #human {
-    width: 500px;
-    /* 大きさ */
-    /* height: 200px; */
+    width: 700px;
     border-radius: 50%;
-    /* 丸くする */
     object-fit: cover;
-    /* 画像の中心を保つ */
-    border: 3px solid rgb(17, 36, 55);
-    /* 枠線 */
+    border: 3px solid rgba(17, 36, 55, 0.8);
     box-shadow: 0 0 10px rgba(19, 24, 85, 0.6);
-    /* 影 */
+    margin-top: 20px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    /* 下外からスタート */
+    width: 100px;
+    /* 初期サイズ */
 }

@@ -13,7 +13,7 @@ function showRestTime() {
         document.querySelector(".start").textContent = null;
         const timerEl = document.querySelector(".timer");
         timerEl.innerHTML = `
-        <span style="font-size: 1.5em;">りょうま！！25歳のお誕生日おめでとう！！</span>
+        <span style="font-size: 1.5em;">Happy Birthday Ryoma!!</span>
     `;
         return;
     }

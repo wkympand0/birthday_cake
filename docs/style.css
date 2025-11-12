@@ -130,7 +130,8 @@ body {
 
 /* ポップアップ背景（最初は非表示） */
 #popup-wrapper {
-    display: flex;
+    display: none;
+    /* 最初は非表示 */
     position: fixed;
     top: 0;
     left: 0;

@@ -13,7 +13,8 @@ function showRestTime() {
         document.querySelector(".start").textContent = null;
         const timerEl = document.querySelector(".timer");
         timerEl.innerHTML = `
-        <span style="font-size: 1.5em;">Happy Birthday Ryoma!!</span>
+        <span style="font-size: 1.5em;">Happy Birthday</span>
+        <span style="font-size: 1.5em;"><br>Ryoma</span>
     `;
         return;
     }
@@ -66,3 +67,57 @@ function createBalloon() {
 
 // 生成間隔 1秒ごと
 setInterval(createBalloon, 1000);
+const clickLetter = document.getElementById('letter');
+const popupWrapper = document.getElementById('popup-wrapper');
+const closeBtn = document.getElementById('close');
+
+// 手紙をクリック → ポップアップ表示
+clickLetter.addEventListener('click', () => {
+    popupWrapper.style.display = "block";
+});
+
+// 外側または✕をクリック → 閉じる
+popupWrapper.addEventListener('click', e => {
+    if (e.target.id === popupWrapper.id || e.target.id === closeBtn.id) {
+        popupWrapper.style.display = 'none';
+    }
+});
+
+const music = document.getElementById('bg-music');
+const toggleBtn = document.getElementById('music-toggle');
+
+// 最初は一度だけクリックで再生許可（iPhoneなど対策）
+document.body.addEventListener('click', () => {
+    if (music.paused) {
+        music.play().catch(err => console.log("再生できません:", err));
+    }
+}, { once: true });
+
+// ボタンで再生・停止を切り替え
+toggleBtn.addEventListener('click', () => {
+    if (music.paused) {
+        music.play();
+        toggleBtn.textContent = "♫";
+    } else {
+        music.pause();
+        toggleBtn.textContent = "♫";
+    }
+});
+
+const gift = document.getElementById("gift");
+const videoWrapper = document.getElementById("video-popup-wrapper");
+const videoClose = document.getElementById("video-close");
+const video = document.getElementById("popup-video");
+
+// gift画像をクリック → 動画再生
+gift.addEventListener("click", () => {
+    videoWrapper.style.display = "flex"; // ポップアップ表示
+    video.play();
+});
+
+// 閉じるボタンで動画停止＆非表示
+videoClose.addEventListener("click", () => {
+    video.pause();
+    video.currentTime = 0;
+    videoWrapper.style.display = "none";
+});

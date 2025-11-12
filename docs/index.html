@@ -28,16 +28,53 @@
                 <span id="second">--</span>秒
             </font>
         </p>
-        <img src="images/ryoma02.jpeg" alt="human" id="human">
+        <img src="images/ryoma03.jpg" alt="human" id="human">
     </div>
     <div class="gift-container">
-        <img src="images/sweets_cake_rousoku.png" alt="gift" id="gift">
+        <img src="images/box.png" alt="gift" id="gift">
         <img src="images/letter.png" alt="letter" id="letter">
     </div>
 
+    <div id="popup-wrapper">
+        <div id="popup-inside">
+            <span id="close">✕</span>
+            <h2>りょうまへ</h2>
+            <p>
+                <br>
+                25歳のお誕生日おめでとう！
+                <br><br>
+                りょうまのお誕生日をお祝いできて、<br>とても嬉しい～！<br>
+                遂に20代後半！大人の色気爆発しちゃうね❤<br>
+                いつもいろいろなところ連れて行ってくれて<br>
+                ありがとう。
+                <br>りょうまの素敵な部分がありすぎて沼深し🐼<br>英会話や小説、ジムだったり、一度決めたことをずっと継続して取り組んでいる姿、とても尊敬しています！
+                ありなも見習います！！
+                <br><br>
+                この1年も素敵な年になりますように！<br>
+                ありなもお手伝いできますように！
+                <br><br>
+                大好き！世界で一番愛してる❤
+                <br><br>
+            </p>
+            <p>　　　　　　　　　　　　　　ありな</p>
+        </div>
+    </div>
+    <div id="video-popup-wrapper">
+        <div id="video-popup">
+            <span id="video-close">✕</span>
+            <video id="popup-video" width="600" controls>
+                <source src="videos/ryoma.mp4" type="video/mp4">
+                お使いのブラウザは動画に対応していません。
+            </video>
+        </div>
+    </div>
+    <div>
+        <button id="music-toggle">♫</button>
+    </div>
+
+    <audio id="bg-music" src="audio/birthday.mp3" loop></audio>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script src="script.js"></script>
-    <audio id="bg-music" src="audio/birthday.mp3" loop></audio>
 
     <script>
         const music = document.getElementById('bg-music');
